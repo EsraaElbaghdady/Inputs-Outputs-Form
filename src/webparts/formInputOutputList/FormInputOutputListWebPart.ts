@@ -321,7 +321,7 @@ console.log(level);
 
 private saveForm(): void {
   const department = (this.domElement.querySelector('#Department') as HTMLSelectElement).value;
-  const section = (this.domElement.querySelector('#Sections') as HTMLSelectElement).value;
+  const section = $('#Sections').val() as string[];
   const level=(this.domElement.querySelector('#Level') as HTMLSelectElement).value;
   const process = (this.domElement.querySelector('#MainProcess') as HTMLSelectElement).value;
   const input = (this.domElement.querySelector('#Input') as HTMLInputElement).value;
@@ -358,9 +358,9 @@ private saveDataToSharePoint(formData: any): Promise<void> {
 
   const body={
     
-    DepartmentId: parseInt( formData.Department),
-    SectionNameId:parseInt (formData.Section),
-    ProcessNameId: parseInt(formData.Process),
+    DepartmentId:  formData.Department,
+    SectionNameId:formData.Section,
+    ProcessNameId: formData.Process,
     ProcessInput: formData.Input,
     ProcessOutput: formData.Output,
     Region: formData.Region,
