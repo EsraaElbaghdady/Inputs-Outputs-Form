@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "form-of-input-output-client-side-solution",
+    "id": "a606ae0e-c13e-4f54-888a-12f3752fe089",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.20.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "form-of-input-output description"
+      },
+      "longDescription": {
+        "default": "form-of-input-output description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "form-of-input-output Feature",
+        "description": "The feature that activates elements of the form-of-input-output solution.",
+        "id": "1ba77f52-bfd5-4a9f-b235-82ef07a73cfa",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/form-of-input-output.sppkg"
+  }
+}
