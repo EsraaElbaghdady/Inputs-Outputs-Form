@@ -292,7 +292,7 @@ console.log(level);
       .then(data => data.value);
   }
 
-  private getLookupItemsfiltered(listTitle: string, department: string,level?: string): Promise<any[]> {
+  private getLookupItemsfiltered(listTitle: string, department: string,level?: string ): Promise<any[]> {
     const dept = Number(department);
     let url = '';
     console.log(level);
@@ -300,9 +300,9 @@ console.log(level);
     if (listTitle === 'Sections') {
         url = `${this.context.pageContext.web.absoluteUrl}/_api/web/lists/getbytitle('${listTitle}')/items?$top=5000&$filter=DepartmentName/Id eq ${dept}`;
     } else if (listTitle === 'Process') {
-console.log(level);
+        console.log(level);
 
-        url = `${this.context.pageContext.web.absoluteUrl}/_api/web/lists/getbytitle('${listTitle}')/items?$top=5000&$filter=Department/Id eq ${dept} and ProcessLevel eq '${level}'`;
+        url = `${this.context.pageContext.web.absoluteUrl}/_api/web/lists/getbytitle('${listTitle}')/items?$top=5000&$filter=Department/Id eq ${dept} and ProcessLevel eq '${level}' `;
 
     } else {
         return Promise.reject(new Error("Invalid list title"));
